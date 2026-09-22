@@ -1,0 +1,190 @@
+/* ============================================================
+   Hello Construction Group — design tokens
+   Generated from the design system. Do not hand-edit values here;
+   change them in the system and regenerate, or the sheet and the
+   build will drift apart.
+
+   THREE THEMES, set with data-theme on <html>:
+     (none) / a-orange  Direction A, Site and steel, orange accent
+     a-blue             Direction A, deep blue accent  (accent keys only)
+     b                  Direction B, Quiet and architectural
+
+   MOBILE FIRST. Every value below the media queries is the phone
+   value. Breakpoints, from the brief:
+     base            750px and below   one column, hamburger nav
+     min-width 751   tablet and up     desktop type, desktop section padding
+     min-width 1001  desktop           12-column grids, full nav
+   ============================================================ */
+
+/* ---------- theme-independent ---------- */
+:root {
+  /* the nine spacing values. There is no tenth. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;                      /* the drop-down panel only */
+
+  --columns: 12;
+  --bp-tablet: 751px;
+  --bp-desktop: 1001px;
+
+  /* Direction A only: the hero scrim. Graded so white clears 3:1 at the
+     headline and 4.5:1 at the sub. Do not simplify to two stops. */
+  --hero-scrim: linear-gradient(to top, rgba(20,20,20,0.92) 0%, rgba(20,20,20,0.80) 35%, rgba(20,20,20,0.50) 62%, rgba(20,20,20,0.12) 100%);
+}
+
+/* ---------- Direction A, orange (the default) ---------- */
+:root,
+[data-theme="a-orange"] {
+  --ground: #f5f3ef;
+  --surface: #ffffff;
+  --surface-sunken: #ebe8e2;
+  --ink: #141414;
+  --ink-muted: #6b6560;
+  --ink-inverse: #ffffff;
+  --rule: #d8d4cd;
+  --border-input: #8a8580;
+  --primary: #e8590c;
+  --primary-hover: #ff6e1f;
+  --primary-border: #141414;
+  --on-primary: #141414;
+  --on-primary-hover: #141414;
+  --accent: #e8590c;
+  --accent-ink: #c2410c;
+  --focus: #141414;
+  --focus-inverse: #ffffff;
+  --error: #9a2313;
+  --error-bg: #fbede9;
+  --success: #2f6b3d;
+  --disabled-bg: #ebe8e2;
+  --disabled-ink: #8a8580;
+  --footer-bg: #141414;
+  --footer-ink: #ffffff;
+  --footer-muted: #b5afa8;
+  --footer-rule: #3a3a3a;
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --content: 1200px;
+  --gutter: 24px;
+  --page-margin: var(--space-4);          /* 24px, phone */
+  --section-y: 48px;
+  --header-h: 72px;
+  --radius: 2px;
+  --shadow-menu: 0 8px 24px rgba(20,20,20,0.14);
+}
+
+/* ---------- Direction A, deep blue ----------
+   Same design. Only the accent moves — this is the whole diff. */
+[data-theme="a-blue"] {
+  --primary: #1f3a5f;
+  --primary-hover: #16293f;
+  --primary-border: #1f3a5f;
+  --on-primary: #ffffff;
+  --on-primary-hover: #ffffff;
+  --accent: #1f3a5f;
+  --accent-ink: #1f3a5f;
+}
+
+/* ---------- Direction B, quiet and architectural ---------- */
+[data-theme="b"] {
+  --ground: #ffffff;
+  --surface: #ffffff;
+  --surface-sunken: #f7f7f7;
+  --ink: #111111;
+  --ink-muted: #666666;
+  --ink-inverse: #ffffff;
+  --rule: #e6e6e6;
+  --border-input: #8c8c8c;
+  --primary: #111111;
+  --primary-hover: #333333;
+  --primary-border: #111111;
+  --on-primary: #ffffff;
+  --on-primary-hover: #ffffff;
+  --accent: #111111;
+  --accent-ink: #111111;
+  --focus: #111111;
+  --focus-inverse: #111111;
+  --error: #a4110a;
+  --error-bg: #fdf0ef;
+  --success: #1e6b3a;
+  --disabled-bg: #f2f2f2;
+  --disabled-ink: #8c8c8c;
+  --footer-bg: #ffffff;
+  --footer-ink: #111111;
+  --footer-muted: #666666;
+  --footer-rule: #e6e6e6;
+
+  --font-display: Fraunces, Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --content: 1120px;
+  --gutter: 32px;
+  --page-margin: var(--space-4);          /* 24px, phone */
+  --section-y: 64px;
+  --header-h: 72px;
+  --radius: 0;
+  --shadow-menu: 0 8px 24px rgba(17,17,17,0.08);
+}
+
+/* ---------- type: phone base ---------- */
+:root .t-display { font-family: var(--font-display); font-size: 46px; line-height: 46px; font-weight: 700; letter-spacing: -0.01em; }
+:root .t-h1 { font-family: var(--font-display); font-size: 38px; line-height: 40px; font-weight: 700; letter-spacing: -0.01em; }
+:root .t-h2 { font-family: var(--font-display); font-size: 28px; line-height: 32px; font-weight: 700; }
+:root .t-h3 { font-family: var(--font-display); font-size: 22px; line-height: 28px; font-weight: 600; }
+:root .t-lead { font-family: var(--font-body); font-size: 20px; line-height: 32px; font-weight: 400; }
+:root .t-body { font-family: var(--font-body); font-size: 18px; line-height: 30px; font-weight: 400; }
+:root .t-small { font-family: var(--font-body); font-size: 15px; line-height: 24px; font-weight: 400; }
+:root .t-label { font-family: var(--font-body); font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+
+html[data-theme="b"] .t-display { font-family: var(--font-display); font-size: 40px; line-height: 46px; font-weight: 300; letter-spacing: -0.015em; }
+html[data-theme="b"] .t-h1 { font-family: var(--font-display); font-size: 34px; line-height: 42px; font-weight: 300; letter-spacing: -0.015em; }
+html[data-theme="b"] .t-h2 { font-family: var(--font-display); font-size: 26px; line-height: 34px; font-weight: 300; }
+html[data-theme="b"] .t-h3 { font-family: var(--font-body); font-size: 19px; line-height: 26px; font-weight: 500; }
+html[data-theme="b"] .t-lead { font-family: var(--font-body); font-size: 20px; line-height: 34px; font-weight: 400; }
+html[data-theme="b"] .t-body { font-family: var(--font-body); font-size: 17px; line-height: 30px; font-weight: 400; }
+html[data-theme="b"] .t-small { font-family: var(--font-body); font-size: 15px; line-height: 24px; font-weight: 400; }
+html[data-theme="b"] .t-label { font-family: var(--font-body); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* ---------- 751px and up: desktop type and section padding ---------- */
+@media (min-width: 751px) {
+  :root .t-display { font-size: 88px; line-height: 84px; }
+  :root .t-h1 { font-size: 64px; line-height: 64px; }
+  :root .t-h2 { font-size: 40px; line-height: 44px; }
+  :root .t-h3 { font-size: 26px; line-height: 32px; }
+
+  html[data-theme="b"] .t-display { font-size: 76px; line-height: 80px; }
+  html[data-theme="b"] .t-h1 { font-size: 56px; line-height: 64px; }
+  html[data-theme="b"] .t-h2 { font-size: 34px; line-height: 44px; }
+  html[data-theme="b"] .t-h3 { font-size: 20px; line-height: 28px; }
+
+  :root,
+  [data-theme="a-orange"],
+  [data-theme="a-blue"] {
+    --page-margin: var(--space-6);        /* 48px */
+    --section-y: var(--space-8);          /* 96px */
+  }
+  [data-theme="b"] {
+    --page-margin: var(--space-8);        /* 96px */
+    --section-y: var(--space-9);          /* 128px */
+  }
+}
+
+/* ---------- 1001px and up: full nav height ---------- */
+@media (min-width: 1001px) {
+  :root,
+  [data-theme="a-orange"],
+  [data-theme="a-blue"] { --header-h: 88px; }
+  [data-theme="b"]      { --header-h: 96px; }
+}
+
+/* ---------- Direction B carries no Google reviews block ---------- */
+[data-theme="b"] .reviews { display: none; }
