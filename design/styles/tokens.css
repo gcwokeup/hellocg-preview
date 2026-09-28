@@ -188,3 +188,58 @@ html[data-theme="b"] .t-label { font-family: var(--font-body); font-size: 12px; 
 
 /* ---------- Direction B carries no Google reviews block ---------- */
 [data-theme="b"] .reviews { display: none; }
+
+/* ---------- Direction A, Redmond (added 2026-09-27 after the client's reference sites) ----------
+   Direction A's structure with the restraint of redmondconstruction.com: white ground, dark grey
+   type, one deep red accent used sparingly, a plain modern sans, and the headline below the hero
+   photo rather than over it. Reviews block stays (Redmond carries one client quote). */
+[data-theme="a-red"] {
+  --ground: #ffffff;
+  --surface: #ffffff;
+  --surface-sunken: #f4f4f2;
+  --ink: #222222;
+  --ink-muted: #5f5f5f;
+  --ink-inverse: #ffffff;
+  --rule: #e2e2e0;
+  --border-input: #8a8a8a;
+  --primary: #9b1b1b;
+  --primary-hover: #7a1414;
+  --primary-border: #9b1b1b;
+  --on-primary: #ffffff;
+  --on-primary-hover: #ffffff;
+  --accent: #9b1b1b;
+  --accent-ink: #9b1b1b;
+  --focus: #222222;
+  --focus-inverse: #ffffff;
+  --error: #9a2313;
+  --error-bg: #fbede9;
+  --success: #2f6b3d;
+  --disabled-bg: #f0f0ee;
+  --disabled-ink: #8a8a8a;
+  --footer-bg: #222222;
+  --footer-ink: #ffffff;
+  --footer-muted: #b8b8b8;
+  --footer-rule: #3a3a3a;
+
+  --font-display: Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --content: 1200px;
+  --gutter: 24px;
+  --page-margin: var(--space-4);
+  --section-y: 48px;
+  --header-h: 72px;
+  --radius: 2px;
+  --shadow-menu: 0 8px 24px rgba(34,34,34,0.12);
+}
+html[data-theme="a-red"] .t-display { font-family: var(--font-display); font-size: 36px; line-height: 42px; font-weight: 600; letter-spacing: -0.02em; }
+html[data-theme="a-red"] .t-h1 { font-family: var(--font-display); font-size: 32px; line-height: 38px; font-weight: 600; letter-spacing: -0.02em; }
+html[data-theme="a-red"] .t-h2 { font-family: var(--font-display); font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: -0.01em; }
+html[data-theme="a-red"] .t-h3 { font-family: var(--font-display); font-size: 19px; line-height: 26px; font-weight: 600; }
+@media (min-width: 751px) {
+  html[data-theme="a-red"] .t-display { font-size: 60px; line-height: 64px; }
+  html[data-theme="a-red"] .t-h1 { font-size: 48px; line-height: 52px; }
+  html[data-theme="a-red"] .t-h2 { font-size: 34px; line-height: 40px; }
+  html[data-theme="a-red"] .t-h3 { font-size: 20px; line-height: 28px; }
+  [data-theme="a-red"] { --page-margin: var(--space-6); --section-y: var(--space-8); }
+}
+@media (min-width: 1001px) { [data-theme="a-red"] { --header-h: 88px; } }

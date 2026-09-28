@@ -92,6 +92,7 @@ THEME_CONTROL = """<!-- Review scaffolding: delete before launch -->
   <legend class="t-label">Direction</legend>
   <label><input type="radio" name="theme" value="a-orange" id="theme-a-orange"> A · Orange</label>
   <label><input type="radio" name="theme" value="a-blue" id="theme-a-blue"> A · Deep blue</label>
+  <label><input type="radio" name="theme" value="a-red" id="theme-a-red"> A · Redmond</label>
   <label><input type="radio" name="theme" value="b" id="theme-b"> B · Quiet</label>
 </fieldset>"""
 
@@ -536,16 +537,22 @@ body { padding-bottom: var(--space-7); }
   body { padding-bottom: 0; }
 
   /* Direction A: media fills the hero, scrim over it, copy bottom-aligned */
-  :root:not([data-theme="b"]) .hero { position: relative; min-height: 820px; grid-template-columns: 1fr; }
-  :root:not([data-theme="b"]) .hero-media { position: absolute; inset: 0; }
-  :root:not([data-theme="b"]) .hero-media .photo { position: absolute; inset: 0; aspect-ratio: auto; height: 100%; border: 0; place-items: start; }
-  :root:not([data-theme="b"]) .hero-media .photo-label { padding: var(--space-4) var(--page-margin); }
-  :root:not([data-theme="b"]) .hero-media::after { content: ""; position: absolute; inset: 0; background: var(--hero-scrim); pointer-events: none; }
-  :root:not([data-theme="b"]) .hero-copy { position: relative; z-index: 1; align-self: end; color: var(--ink-inverse); max-width: var(--content); width: 100%; margin-inline: auto; padding-block: var(--space-8); }
-  :root:not([data-theme="b"]) .hero-copy .t-display { max-width: 18ch; }
-  :root:not([data-theme="b"]) .hero-copy .t-lead { max-width: 34em; }
-  :root:not([data-theme="b"]) .btn-on-photo { border-color: var(--ink-inverse); color: var(--ink-inverse); }
-  :root:not([data-theme="b"]) .btn-on-photo:hover { background: var(--ink-inverse); color: var(--ink); }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero { position: relative; min-height: 820px; grid-template-columns: 1fr; }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-media { position: absolute; inset: 0; }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-media .photo { position: absolute; inset: 0; aspect-ratio: auto; height: 100%; border: 0; place-items: start; }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-media .photo-label { padding: var(--space-4) var(--page-margin); }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-media::after { content: ""; position: absolute; inset: 0; background: var(--hero-scrim); pointer-events: none; }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-copy { position: relative; z-index: 1; align-self: end; color: var(--ink-inverse); max-width: var(--content); width: 100%; margin-inline: auto; padding-block: var(--space-8); }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-copy .t-display { max-width: 18ch; }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .hero-copy .t-lead { max-width: 34em; }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .btn-on-photo { border-color: var(--ink-inverse); color: var(--ink-inverse); }
+  :root:not([data-theme="b"]):not([data-theme="a-red"]) .btn-on-photo:hover { background: var(--ink-inverse); color: var(--ink); }
+
+  /* Direction A Redmond: photo first, headline below it, like the client's reference site */
+  [data-theme="a-red"] .hero-media .photo { aspect-ratio: 21 / 9; border-inline: 0; border-top: 0; }
+  [data-theme="a-red"] .hero-copy { max-width: var(--content); margin-inline: auto; padding-block: var(--space-7) var(--space-5); }
+  [data-theme="a-red"] .hero-copy .t-display { max-width: 18ch; }
+  [data-theme="a-red"] .hero-copy .t-lead { max-width: 34em; }
 
   /* Direction B: never overlays */
   [data-theme="b"] .hero { padding-inline: var(--page-margin); padding-block: var(--section-y); max-width: calc(var(--content) + 2 * var(--page-margin)); margin-inline: auto; gap: var(--space-6); }
@@ -579,7 +586,7 @@ body { padding-bottom: var(--space-7); }
 
 THEME_JS = r"""// Theme switch: sets data-theme on <html>, persists it, and holds it if the host stamps its own value.
 (function () {
-  var KEY = 'hellocg-theme', VALID = ['a-orange', 'a-blue', 'b'], root = document.documentElement;
+  var KEY = 'hellocg-theme', VALID = ['a-orange', 'a-blue', 'a-red', 'b'], root = document.documentElement;
   function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function apply(v) {
     if (VALID.indexOf(v) < 0) v = 'a-orange';

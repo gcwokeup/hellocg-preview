@@ -1,6 +1,6 @@
 // Theme switch: sets data-theme on <html>, persists it, and holds it if the host stamps its own value.
 (function () {
-  var KEY = 'hellocg-theme', VALID = ['a-orange', 'a-blue', 'b'], root = document.documentElement;
+  var KEY = 'hellocg-theme', VALID = ['a-orange', 'a-blue', 'a-red', 'b'], root = document.documentElement;
   function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function apply(v) {
     if (VALID.indexOf(v) < 0) v = 'a-orange';
