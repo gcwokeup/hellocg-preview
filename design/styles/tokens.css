@@ -190,7 +190,7 @@ html[data-theme="b"] .t-label { font-family: var(--font-body); font-size: 12px; 
 [data-theme="b"] .reviews { display: none; }
 
 /* ---------- Direction A, Redmond (added 2026-09-27 after the client's reference sites) ----------
-   Direction A's structure with the restraint of redmondconstruction.com: white ground, dark grey
+   Direction A's structure with the restraint of redmondconstruction.com: white ground, dark gray
    type, one deep red accent used sparingly, a plain modern sans, and the headline below the hero
    photo rather than over it. Reviews block stays (Redmond carries one client quote). */
 [data-theme="a-red"] {

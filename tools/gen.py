@@ -123,7 +123,7 @@ def project_card(title, typ, photo):
   <div class="project-card-body">
     <p class="t-label muted">{typ}</p>
     <h3 class="t-h3">{title}</h3>
-    <p class="t-small">{gap("neighbourhood")} · {gap("one-line scope")}</p>
+    <p class="t-small">{gap("neighborhood")} · {gap("one-line scope")}</p>
   </div>
 </a>"""
 
@@ -287,7 +287,7 @@ PAGES["projects"] = ("Projects | Commercial & Residential Work in Chicago | Hell
 </section>
 """)
 
-PAGES["project"] = ("[Project name] | Commercial in [Neighbourhood] | Hello Construction Group",
+PAGES["project"] = ("[Project name] | Commercial in [Neighborhood] | Hello Construction Group",
 "A commercial project by Hello Construction Group, licensed Chicago general and electrical contractor.",
 "projects", f"""
 <section class="section page-head">
@@ -299,7 +299,7 @@ PAGES["project"] = ("[Project name] | Commercial in [Neighbourhood] | Hello Cons
 <section class="section-tight">
   <div class="container">
     <dl class="facts-row">
-      <div><dt class="t-label muted">Neighbourhood</dt><dd class="t-h3">{gap("neighbourhood")}</dd></div>
+      <div><dt class="t-label muted">Neighborhood</dt><dd class="t-h3">{gap("neighborhood")}</dd></div>
       <div><dt class="t-label muted">Type</dt><dd class="t-h3">Commercial</dd></div>
       <div><dt class="t-label muted">Scope</dt><dd class="t-h3">{gap("scope")}</dd></div>
       <div><dt class="t-label muted">Role</dt><dd class="t-h3">GC of record</dd></div>
@@ -331,7 +331,7 @@ PAGES["about"] = ("About Hello Construction Group | Licensed GC & Electrical Con
 </section>
 <section class="section band">
   <div class="container stack-lg">
-    <div><h2 class="t-h2">Why the new name</h2><p class="t-body narrow">Hello Home Construction became Hello Construction Group because the work changed. More of what we build now is commercial: tenant build-outs, industrial and plant work. The company, the licences and the crews are the same; the name now says what we do.</p></div>
+    <div><h2 class="t-h2">Why the new name</h2><p class="t-body narrow">Hello Home Construction became Hello Construction Group because the work changed. More of what we build now is commercial: tenant build-outs, industrial and plant work. The company, the licenses and the crews are the same; the name now says what we do.</p></div>
     <div><h2 class="t-h2">Licensed general contractor and electrical contractor</h2><p class="t-body narrow">City of Chicago General Contractor License TGC133426 (Class D) and Electrical Contractor License ECC96203. EPA Lead-Safe Certified Firm. Veteran-founded.</p></div>
   </div>
 </section>

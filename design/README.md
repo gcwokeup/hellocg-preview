@@ -36,7 +36,7 @@ bottom-right corner.
 - **Direction A · Deep blue** — the same design with a different accent.
   Seven custom properties differ and nothing else.
 - **Direction B · Quiet** — Quiet and architectural. White, light serif
-  headlines, no accent colour, photos framed with white space and never
+  headlines, no accent color, photos framed with white space and never
   overlaid, white footer. Drops the Google reviews block.
 
 ## Two things worth knowing before you read the spec

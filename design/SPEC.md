@@ -7,7 +7,7 @@ design directions so the client can pick one by eye.
 Its readers are other general contractors, architects and engineers who
 already know the owner and are checking that the company is real, licensed
 and does commercial work. Not homeowners shopping for a remodeler. The job
-is credibility in ten seconds: the name, the licences, the kind of work, a
+is credibility in ten seconds: the name, the licenses, the kind of work, a
 few real projects, one way to get in touch.
 
 ## Stack and ground rules
@@ -20,10 +20,10 @@ links.
 - **Mobile first.** Phone styles are the base; everything else is a
   `min-width` media query. Never write a `max-width` query.
 - **`styles/tokens.css` is generated and authoritative. Do not edit it and
-  do not hard-code a colour, font size, radius or spacing value anywhere
+  do not hard-code a color, font size, radius or spacing value anywhere
   else.** Every value in the design is already a custom property or a
   `.t-*` type class. If something seems to need a value that is not in
-  there, that is a bug in the design, not a licence to invent one — stop
+  there, that is a bug in the design, not a license to invent one — stop
   and say so.
 - Semantic HTML. Real `<button>`, `<a href>`, `<input>` with a matching
   `<label>`, `<nav>`, `<header>`, `<main>`, `<footer>`. Never a `role` or
@@ -54,7 +54,7 @@ assets/hellocg-wordmark-transparent.png
 `residential.html` and `electrical.html` reuse the `commercial.html`
 template with their own copy from CONTENT.md. The brief only wrote copy
 for Commercial in full; the other two get their H1, lead and the shared
-licence block, with the body sections marked as gaps.
+license block, with the body sections marked as gaps.
 
 ## The theme switch
 
@@ -66,7 +66,7 @@ Three positions, in this order:
 | `a-blue` | Direction A · Deep blue | same design, accent only |
 | `b` | Direction B · Quiet | a different design |
 
-Behaviour:
+Behavior:
 
 - Sets `data-theme` on `<html>`. Nothing else. All three themes are already
   defined in `tokens.css`.
@@ -152,8 +152,8 @@ Two kinds, plus one variant that only exists over a photo.
   box-shadow: 0 0 0 2px var(--ground), 0 0 0 4px var(--focus);
   ```
   The ring sits *outside* the control with a gap in the page's own ground
-  colour, so it never has to contrast against the control's fill. That is
-  why one ring colour works on a black button and an orange one. Use
+  color, so it never has to contrast against the control's fill. That is
+  why one ring color works on a black button and an orange one. Use
   `--focus-inverse` inside the footer. Do not replace this with `outline`
   unless you keep the offset.
 
@@ -215,13 +215,13 @@ One column on phone, two at 751px, three at 1001px.
 
 ### Project card
 Photo placeholder, type label (`.t-label`, `--ink-muted`, reads Commercial
-/ Residential / Electrical), title, then the neighbourhood and one-line
+/ Residential / Electrical), title, then the neighborhood and one-line
 scope. Direction A frames it in a card with the photo flush to the top
 edge; Direction B removes the card, gives the image a `--rule` border, and
 sets the text on `--ground` beneath it.
 
 ### Facts row
-Neighbourhood · Type · Scope · Role · Year, at the head of a project
+Neighborhood · Type · Scope · Role · Year, at the head of a project
 detail page. Role is always spelled out — **GC of record** or **Electrical
 subcontractor**. Labels `.t-label` in `--ink-muted`, values `.t-h3` in
 `--ink`. Direction A bands it in `--surface-sunken` with a `--rule` border;
@@ -244,7 +244,7 @@ placeholder as a label.
 - Success: the form is replaced by a line that leads with the word
   **Sent.** in `--success` followed by plain confirmation in `--ink`.
 
-Colour is never the only signal for either state — the words carry it.
+Color is never the only signal for either state — the words carry it.
 
 The form does not submit anywhere. Wire the Send button to show the success
 line client-side so the state is demonstrable, and leave a comment saying
@@ -258,7 +258,7 @@ none; }` — give the section `class="reviews"` and do not add your own
 logic.
 
 **No Google asset ships with this package and a trademark must not be
-redrawn from memory.** Render a labelled dashed placeholder where the mark
+redrawn from memory.** Render a labeled dashed placeholder where the mark
 goes. Drop in the official mark from Google's own brand resources at build
 time, or cut the block — it is optional and the client has not decided.
 
@@ -334,7 +334,7 @@ These are settled client decisions, not suggestions.
 7. **Bracketed `[RON: …]` text is a gap for the client to fill, not copy.**
    Render it visibly distinct — monospace, in a dashed 1px outline. Never
    invent content for one. There is no token for this because it is not a
-   site colour; use `#6b4bc4` and delete the rule before launch.
+   site color; use `#6b4bc4` and delete the rule before launch.
 
 ## Accessibility
 
@@ -342,8 +342,8 @@ Every pair below already holds in all three themes. Keep it that way.
 
 - Body text 4.5:1 against its background; 3:1 for text at 24px and above,
   and for any border, focus ring or mark that carries meaning.
-- `--ink-muted` is the only secondary text colour. Do not lighten it. The
-  warm grey `#8a8580` is in the palette as `--border-input` precisely
+- `--ink-muted` is the only secondary text color. Do not lighten it. The
+  warm gray `#8a8580` is in the palette as `--border-input` precisely
   because it is too light for body text at 3.3:1 and fine for a control
   border at 3.65:1.
 - Every interactive element is keyboard reachable and shows the focus ring.
@@ -360,9 +360,9 @@ Run these before you call it done and report the results.
 1. `grep -rniE 'tel:|\([0-9]{3}\)[[:space:]]*[0-9]{3}|[0-9]{3}[-.][0-9]{3}[-.][0-9]{4}' --include='*.html' .` — must return nothing.
 2. `grep -rni 'veteran-owned' --include='*.html' .` — must return nothing.
 3. Every `.html` contains all three legal lines verbatim and `info@hellocg.com`.
-4. No hex colour, `px` font-size, or raw spacing value in `site.css` that
+4. No hex color, `px` font-size, or raw spacing value in `site.css` that
    is not a `var(--…)`. `grep -nE '#[0-9a-fA-F]{3,8}\b' styles/site.css` —
-   the only allowed hit is the `[RON: …]` placeholder colour `#6b4bc4`.
+   the only allowed hit is the `[RON: …]` placeholder color `#6b4bc4`.
    `grep -nE 'font-size:[^v]' styles/site.css` must return nothing.
 5. Switch through all three themes on every page: no unstyled flash, the
    selection survives navigation, and the reviews block is absent in

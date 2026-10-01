@@ -4,7 +4,7 @@ Use this text as written. It is the client's approved copy.
 
 Bracketed `[RON: …]` and `[…]` text is a **gap the client will fill**.
 Render it as visible placeholder text in a distinct style — monospace,
-`#6b4bc4`, inside a 1px dashed outline of the same colour. Never invent
+`#6b4bc4`, inside a 1px dashed outline of the same color. Never invent
 content for one.
 
 Titles and meta descriptions are for the build, not the page. They are here
@@ -75,7 +75,7 @@ footer, not on the contact page.
 
 ### Recent projects
 - **H2:** Recent projects
-- Three project cards, each: `[neighbourhood]` · `[one-line scope]`
+- Three project cards, each: `[neighborhood]` · `[one-line scope]`
 - Link: All projects
 
 ### What clients say — Direction A only
@@ -165,14 +165,14 @@ Same template as Commercial.
 - **Intro:** A selection of recent work. Some of our projects are under agreements with the architects and owners and are not shown.
 - **Filter row:** All · Commercial · Residential · Electrical (All selected; static is fine)
 
-Four placeholder cards, each with a photo block, a title, a neighbourhood line and a one-line scope:
+Four placeholder cards, each with a photo block, a title, a neighborhood line and a one-line scope:
 
-| Title | Type | Neighbourhood | Scope |
+| Title | Type | Neighborhood | Scope |
 |---|---|---|---|
-| Commercial tenant build-out | Commercial | `[neighbourhood]` | `[one-line scope]` |
-| Industrial plant work | Commercial | `[neighbourhood]` | `[one-line scope]` |
-| Kitchen and bath renovation | Residential | `[neighbourhood]` | `[one-line scope]` |
-| Electrical service upgrade | Electrical | `[neighbourhood]` | `[one-line scope]` |
+| Commercial tenant build-out | Commercial | `[neighborhood]` | `[one-line scope]` |
+| Industrial plant work | Commercial | `[neighborhood]` | `[one-line scope]` |
+| Kitchen and bath renovation | Residential | `[neighborhood]` | `[one-line scope]` |
+| Electrical service upgrade | Electrical | `[neighborhood]` | `[one-line scope]` |
 
 ---
 
@@ -181,7 +181,7 @@ Four placeholder cards, each with a photo block, a title, a neighbourhood line a
 A template, shown with one worked example.
 
 - **H1:** `[Project name]`
-- **Facts row:** Neighbourhood · Type · Scope · Role (GC of record, or Electrical subcontractor) · Year
+- **Facts row:** Neighborhood · Type · Scope · Role (GC of record, or Electrical subcontractor) · Year
   Fill Type with `Commercial` and Role with `GC of record`; the rest are gaps.
 - **Body:** `[three to five sentences: what was asked, what was done, what was hard]`
 - **Gallery:** before and after, two placeholder blocks, captioned Before and After
@@ -194,7 +194,7 @@ A template, shown with one worked example.
 - **H1:** About Hello Construction Group
 
 **H2: Why the new name**
-Hello Home Construction became Hello Construction Group because the work changed. More of what we build now is commercial: tenant build-outs, industrial and plant work. The company, the licences and the crews are the same; the name now says what we do.
+Hello Home Construction became Hello Construction Group because the work changed. More of what we build now is commercial: tenant build-outs, industrial and plant work. The company, the licenses and the crews are the same; the name now says what we do.
 
 **H2: Licensed general contractor and electrical contractor**
 City of Chicago General Contractor License TGC133426 (Class D) and Electrical Contractor License ECC96203. EPA Lead-Safe Certified Firm. Veteran-founded.

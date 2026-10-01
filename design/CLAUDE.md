@@ -6,9 +6,9 @@ describe. `reference/` shows what the result should look like.
 ## The rules that break the build if you miss them
 
 - **`styles/tokens.css` is generated. Do not edit it, and do not write a
-  colour, font size, radius or spacing value anywhere else.** Everything is
+  color, font size, radius or spacing value anywhere else.** Everything is
   already a `var(--…)` or a `.t-*` class. If you think you need a value
-  that is not there, stop and say so — it is a design bug, not a licence to
+  that is not there, stop and say so — it is a design bug, not a license to
   invent one.
 - **Mobile first.** Phone styles are the base. `min-width` queries only.
   Never a `max-width` query.
@@ -18,7 +18,7 @@ describe. `reference/` shows what the result should look like.
 - **The three legal lines are fixed text.** Character for character, in the
   footer of every page.
 - **No stock photography and no generated imagery.** Every photo slot is a
-  labelled placeholder block. The only image on the site is the supplied
+  labeled placeholder block. The only image on the site is the supplied
   logotype.
 - **Bracketed `[RON: …]` text is a gap for the client, not copy.** Render
   it visibly distinct. Never invent content for one.
